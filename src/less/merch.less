@@ -1,0 +1,66 @@
+.merch {
+	min-height:1px;
+	padding-bottom:96px;
+	background:#272622;
+	.grid {
+		margin:64px auto 0;
+	}
+	.column {
+		position:relative;
+		margin:auto;
+		float:none;
+		max-width:280px;
+		margin-bottom:64px;
+		padding:0;
+		h2 {
+			position:absolute;
+			top:-17px;
+			left: 50%;
+			text-align:center;
+			background: rgba(0,0,0,0.95);
+			padding:4px 8px;
+			border:1px solid #fff;
+			border-radius:64px;
+			width:90px;
+			margin-left:-45px;
+		}
+		.dollars {
+			position:absolute;
+			font-size:24px;
+			bottom:-32px;
+			left: 50%;
+			margin-left:-32px;
+			display:block;
+			background: rgba(0,0,0,0.95);
+			padding:4px 8px;
+			border:1px solid #fff;
+			border-radius:64px;
+			width:64px;
+			height:64px;
+			padding-top:14px;
+			text-align:center;
+			pointer-events:none;
+			transition: all 0.25s ease-in-out;
+		}
+		a:hover .dollars {
+			background:#fff;
+			color:#000;
+		}
+		img {
+			display:block;
+			border:1px solid #fff;
+		}
+	}
+}
+
+@media (min-width:575px) {
+	.merch {
+		.column {
+			width:50%;
+			float:left;
+			max-width:100%;
+			padding: 0 1.5em;
+			margin-bottom:48px;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+$ ->
+  $(document).scroll () ->
+    scrollTop = $(window).scrollTop()
+    winHeight = window.innerHeight
+    scrollPercent = Math.min 100*(scrollTop / 1200), 100
+    $("header").css "background-position", "0% "+scrollPercent+"%"
+
+    $("section").each () ->
+      elScrollTop = $(@).offset().top
+      elOpacity = Math.min(Math.max(0, ((scrollTop+winHeight-elScrollTop)/elScrollTop)), 1)*2
+      $(@).css("opacity",elOpacity)
+      
+  $(document).scroll()

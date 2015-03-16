@@ -1,0 +1,165 @@
+
+.intro {
+	padding-top:128px;
+	height:480px;
+}
+
+// HEADER BACKGROUND
+
+.background-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  top:0px;
+}
+
+.background-img {
+  position:absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/44759/cs-bg.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+}
+
+// END HEADER BACKGROUND IMAGE
+
+
+
+// INTRO POSITIONING
+
+.intro {
+	.content {
+		position:absolute;
+		top:50%;
+		left:0;
+		right:0;
+		margin-top:-113px;
+		z-index:2;
+	}
+}
+
+// END INTRO
+
+
+// CONSILIENCE HEADING
+
+.intro {
+	&:before {
+    content:"";
+    position:absolute;
+    z-index:1;
+    top:0;right:0;left:0; bottom:0;
+    background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.9)); 
+  }
+	h1 {
+		font-size: 38px;
+		font-weight:200;
+		letter-spacing:4px;
+		text-shadow: 0 0 6px #fff;
+		text-align:center;
+		position:relative;
+		line-height:1;
+		margin-bottom:32px;
+	}
+}
+
+@media (min-width: 500px) {
+  .intro {
+  		height:100%;
+  		min-height:480px;
+    h1 {
+      font-size: 64px;
+      font-weight:100;
+    }
+  }
+}
+
+@media (min-width: 680px) {
+  .intro {
+    h1 {
+      font-size: 96px;
+      font-weight:100;
+    }
+  }
+}
+
+
+// END CONSILIENCE HEADING
+
+
+
+// FACEBOOK LIKE
+
+.fb-like {
+  position:absolute;
+  left:50%;
+  margin-left: -40px;
+  top: -24px;
+}
+
+@media (min-width: 680px) {
+  .fb-like {
+    top:0;
+  }
+}
+
+// END FACEBOOK LIKE
+
+// CONTACT ICONS
+
+.contact-icons {
+	height:80px;
+	position:absolute;
+	bottom:96px;
+	left:0;
+	right:0;
+	z-index:2;
+	margin:auto;
+	max-width:480px;
+	.contact-item {
+		width:33.33%;
+		text-align:center;
+		a:hover {
+			.icon {
+				background:#fff;
+				color:#000;
+			}
+		}
+	}
+	.icon {
+		transition: all 0.2s ease-in-out;
+		width:48px;
+		height:48px;
+		border:1px solid #fff;
+		display:block;
+		border-radius:24px;
+		margin:5px auto;
+		&:before {
+			position:relative;
+			top:12px;
+			font-size: 24px;
+		}
+	}
+	.icon-bandcamp:before {
+		font-size:32px;
+		top:7px;
+	}
+	.icon-email:before {
+		top:11px;
+	}
+	.contact-label {
+		font-size:12px;
+		font-family: Raleway, sans-serif;
+		text-transform:uppercase;
+	}
+}
+
+// END CONTACT ICONS

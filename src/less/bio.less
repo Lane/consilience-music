@@ -1,0 +1,73 @@
+.bio {
+	color: #333;
+	text-shadow: 0 0 1px rgba(0,0,0,0.35);
+	background-color: #fbfbfb;
+	background-image: url("../assets/img/bio-large-bg.jpg");
+	background-size: 100% auto;
+	background-position: bottom center;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	h1 {
+		text-shadow: 0 0 2px rgba(0,0,0,0.5);
+		&:after {
+			box-shadow: 0 0 2px rgba(0,0,0,0.5);
+		}
+	}
+	.grid {
+		position:relative;
+		z-index:2;
+	}
+	&:before {
+    content:"";
+    position:absolute;
+    z-index:1;
+    top:0;right:0;left:0; bottom:0;
+    background-image: linear-gradient( rgba(255,255,255,0), rgba(255,255,255,0.925) 180px); 
+  }
+  h1:after {
+  	background:#333;
+  }
+	.quote {
+		width:100%;
+		font-size:24px;
+		margin:48px 0;
+		span {
+			display:block;
+			text-align:right;
+			font-size:16px;
+			margin-top:12px;
+		}
+	}
+	.grid {
+		max-width:460px;
+	}
+	.column { 
+		padding:0 16px;
+	}
+	.about:first-child p:first-child {
+		margin-bottom:0;
+	}
+}
+
+@media (min-width: 680px) {
+	.bio {
+		.grid {
+			max-width: 680px;
+		}
+		.quote {
+			width:100%;
+			font-size:24px;
+			margin:48px 0;
+			text-align:center;
+			span {
+				display:block;
+				text-align:right;
+				font-size:16px;
+				margin-top:12px;
+			}
+		}
+		.about {
+			width:50%;
+		}
+	}	
+}

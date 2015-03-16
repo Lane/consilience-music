@@ -1,0 +1,121 @@
+.music {
+	background: rgba(95, 87, 79, 0.8);
+	min-height:0;
+	padding-bottom:64px;
+}
+
+// LATEST RELEASES
+
+.music {
+	.grid .row.group {
+    margin-top:64px;
+  }
+	.play-button {
+		position:absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		max-width:200px;
+		margin:auto;
+		z-index:3;
+		display:block;
+		cursor:pointer;
+	}
+	.play-icon {
+		&:after, &:before {
+			content:"";
+			position:absolute;
+			display:block;
+			margin:auto;
+			top:0;left:0;right:0;bottom:0;
+		}
+		&:after {
+			border-radius:38px;
+			border:2px solid #fff;
+			box-shadow: 0 1px 4px 1px #000;
+			width:64px;
+			height:64px;
+			background-color:rgba(0,0,0,0.5);
+		}
+		&:before {
+			width:0;
+			height:0;
+			border: 16px solid transparent;
+			border-left-color:#fff;
+			left:20px;
+			z-index:2;
+		}
+	}
+	.music-player {
+		.play-icon {
+	    &:after {
+	      width:32px;
+	      height:32px;
+	    }
+	    &:before {
+	    	border-width:8px;
+	    	left:11px;
+	    }
+	  }
+	}
+	.player { 
+	  text-align:center;
+	  font-family:"Raleway",sans-serif;
+	  text-transform:uppercase;
+	}
+	.album-name {
+	  font-size:1.85em;
+	  display:block;
+	  text-transform: none;
+	  font-family: "PT Serif", serif;
+	  margin: 0 auto 12px;
+	  max-width:330px;
+	}
+	.album {
+		position:relative;
+	  margin-bottom: 32px;
+	  border-radius:0px;  
+	  img { 
+	  	transition: opacity 0.2s ease-in-out;
+	  	opacity:0.6;
+	    display:block; 
+	    width:100%;
+	    max-width:200px; 
+	    margin:auto;
+	    border: 1px solid #fff;
+	    box-shadow: 0 0 32px rgba(255,255,255,0.25); 
+	  }
+	  &:hover img {
+	  	opacity:1;
+	  }
+	}
+}
+
+@media (min-width: 575px) {
+	.music {
+		.grid .row.group {
+      margin-top:64px;
+    }
+		.album {
+			width:40%;
+			padding: 0 0 0 1.5em;
+			img {
+				max-width:100%;
+			}
+			.play-button {
+				&:after {
+					left:1.5em;
+				}
+				&:before {
+					left: 2.7em;
+				}
+			}
+		}
+		.player {
+			width:60%;
+		}
+	}	
+}
+
+// END LATEST RELEASE
